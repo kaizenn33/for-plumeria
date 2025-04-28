@@ -19,3 +19,43 @@
 #copyright a{color:#666}
 #icon{font-size: 48px;color: red;margin: 50 px; align-content: center;}
 #heartspan{align-content: center;text-align: center;margin: 20px;}
+
+#iframeSlider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    margin: 20px auto;
+}
+
+#iframeContainer {
+    width: 70%;
+    overflow: hidden;
+    position: relative;
+}
+
+.musicIframe {
+    width: 100%;
+    height: 352px;
+    display: none; /* Hide all iframes initially */
+}
+
+.musicIframe.active {
+    display: block; /* Show only the active iframe */
+}
+
+.slider-btn {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 0 10px;
+}
+
+.slider-btn:hover {
+    background-color: #ff4a3d;
+}
