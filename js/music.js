@@ -4,7 +4,10 @@ $(document).ready(function () {
     const $window = $(window);
     const $loveHeart = $("#loveHeart");
     const $code = $("#code");
+    const $iframes = $(".musicIframe");
+    let currentIndex = 0;
 
+    // Adjust iframe dimensions
     function adjustDimensions() {
         $iframe.css({
             width: $loveHeart.width() * 1.0, // 100% of #loveHeart's width
@@ -12,39 +15,24 @@ $(document).ready(function () {
         });
     }
 
+    // Center the iframe on the page
     function centerIframe() {
         const iframeWidth = $iframe.width();
+        const iframeHeight = $iframe.height();
         const windowWidth = $window.width();
+        const windowHeight = $window.height();
 
         $iframe.css({
             position: "absolute",
             left: (windowWidth - iframeWidth) / 2, // Center horizontally
-            top: (windowHeight - iframeHeight) / 3,
+            top: (windowHeight - iframeHeight) / 3, // Center vertically
         });
     }
-
-    // Adjust dimensions and center iframe on window resize
-    $window.resize(function () {
-        adjustDimensions();
-        centerIframe();
-    });
-
-    // Initial adjustments
-    adjustDimensions();
-    centerIframe();
-
-    // Apply typewriter effect to the #code element
-    $code.typewriter();
-});
-
-$(document).ready(function () {
-    const $iframes = $(".musicIframe");
-    let currentIndex = 0;
 
     // Show the first iframe initially
     function initializeIframes() {
         $iframes.hide(); // Hide all iframes
-        $iframes.eq(currentIndex).show(); // Show the first iframe
+        $iframes.eq(currentIndex).fadeIn(); // Show the first iframe
     }
 
     // Function to show the iframe at a specific index
@@ -65,6 +53,19 @@ $(document).ready(function () {
         showIframe(currentIndex);
     });
 
+    // Adjust dimensions and center iframe on window resize
+    $window.resize(function () {
+        adjustDimensions();
+        centerIframe();
+    });
+
+    // Initial adjustments
+    adjustDimensions();
+    centerIframe();
+
     // Initialize the iframes
     initializeIframes();
+
+    // Apply typewriter effect to the #code element
+    $code.typewriter();
 });
