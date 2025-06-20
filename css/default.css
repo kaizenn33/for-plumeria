@@ -81,3 +81,28 @@
     background-color: black;
     color: #1db954;
 }
+@font-face {
+    font-family: digit;
+    src: url('digital-7_mono.ttf') format("truetype");
+}
+/* Apology button style */
+.apology-btn {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 10px 28px;
+    background: linear-gradient(90deg, #ffb6b9 0%, #fae3d9 100%);
+    color: #fff;
+    font-family: 'Pacifico', cursive, sans-serif;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0 4px 16px rgba(255,182,185,0.15);
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: background 0.3s, transform 0.2s;
+}
+.apology-btn:hover {
+    background: linear-gradient(90deg, #fae3d9 0%, #ffb6b9 100%);
+    color: #ff6f61;
+    transform: translateY(-2px) scale(1.04);
+}
