@@ -1,4 +1,44 @@
-﻿body{margin:0;padding:0;background:#ffe;font-size:12px;overflow:auto}
+﻿/* National Girlfriends' Day Button Styles */
+.ngd-btn {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 12px 32px;
+  font-size: 1.15rem;
+  font-family: 'Segoe Script', 'Brush Script MT', cursive, sans-serif;
+  color: #fff;
+  background: linear-gradient(90deg, #ffb6c1 0%, #ff69b4 100%);
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 4px 16px rgba(255, 105, 180, 0.18), 0 1.5px 6px rgba(255,182,193,0.12);
+  transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+  text-shadow: 0 1px 6px #e75480a0;
+  letter-spacing: 1px;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+}
+.ngd-btn:hover, .ngd-btn:focus {
+  background: linear-gradient(90deg, #ff69b4 0%, #ffb6c1 100%);
+  transform: translateY(-2px) scale(1.04) rotate(-1deg);
+  box-shadow: 0 8px 24px rgba(255, 105, 180, 0.25), 0 2px 8px rgba(255,182,193,0.18);
+}
+.ngd-btn::after {
+  content: '\2665'; /* Heart symbol */
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%) scale(1.2);
+  color: #fff5fa;
+  opacity: 0.7;
+  font-size: 1.3em;
+  pointer-events: none;
+  transition: opacity 0.2s;
+}
+.ngd-btn:hover::after {
+  opacity: 1;
+}
+body{margin:0;padding:0;background:#ffe;font-size:12px;overflow:auto}
 #mainDiv{width:100%;height:100%}
 #loveHeart{float:left;width:670px;height:625px}
 #garden{width:100%;height:100%}
